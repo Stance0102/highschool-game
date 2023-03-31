@@ -1,0 +1,583 @@
+@charset "utf-8";
+@mixin max {
+  height: 100%;
+  width: 100%;
+}
+@mixin text1 {
+  position: absolute;
+  width: 20%;
+  height: 10%;
+  left: 40%;
+  top: 10%;
+  color: #333;
+  font-size: 2.5em;
+  line-height: 2em;
+  letter-spacing: 0.03em;
+  font-family: "華康超特明體(P)";
+  text-align: center;
+  z-index: 999;
+}
+@mixin text2 {
+  position: absolute;
+  height: 30%;
+  color: #555;
+  font-size: 1em;
+  line-height: 1.8em;
+  letter-spacing: 0.08em;
+  font-family: "文鼎特標準宋體";
+  font-weight: 500;
+  text-align: left;
+}
+@mixin line {
+  position: absolute;
+  width: 6%;
+  height: 10%;
+  left: 47%;
+  top: 10%;
+  border-bottom: 1px #333 solid;
+}
+@mixin titdot1 {
+  position: absolute;
+  width: 5%;
+  height: 10%;
+  font-size: 2em;
+  text-align: center;
+  left: 41%;
+  font-weight: bold;
+  z-index: 99;
+}
+@mixin titdot2 {
+  position: absolute;
+  width: 5%;
+  height: 10%;
+  font-size: 2em;
+  text-align: center;
+  right: 41%;
+  font-weight: bold;
+  z-index: 99;
+}
+@mixin bg {
+  position: relative;
+  background-image: url(img/bg1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+@mixin parallax {
+  position: relative;
+  background-size: cover;
+  background-image: url(img/parallax.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+@mixin tdbtn {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  bottom: 5%;
+  left: 47.5%;
+  border: #fff solid;
+  border-radius: 60px;
+  background-color: transparent;
+  font-size: 3em;
+  text-align: center;
+  color: #fff;
+}
+@mixin dot {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  bottom: 20%;
+  border: #333 solid;
+  border-radius: 15px;
+}
+@mixin lrsul {
+  position: absolute;
+  width: 400%;
+  height: 100%;
+  left: 0;
+  li {
+    list-style: none;
+    float: left;
+    width: 25%;
+  }
+}
+@mixin udsul {
+  position: absolute;
+  height: 400%;
+  width: 25%;
+  li {
+    list-style: none;
+    height: 25%;
+  }
+}
+@mixin shop {
+  position: absolute;
+  width: 15%;
+  height: 20%;
+  border: #b2b2b2 solid;
+  transition: 0.6s linear;
+}
+@mixin mask {
+  position: absolute;
+  opacity: 0;
+  transition: 0.6s linear;
+  font-weight: bold;
+  text-align: center;
+  @include max;
+}
+@mixin circle {
+  position: absolute;
+  border: #877e76 solid 4px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 99;
+  overflow: hidden;
+}
+@mixin formcon {
+  position: absolute;
+  width: 20%;
+  height: 25%;
+  left: 15%;
+  font-size: 1.2em;
+  color: #fff;
+  text-align: left;
+}
+@mixin fans {
+  position: absolute;
+  width: 3%;
+  height: 35%;
+  border-radius: 15px;
+  border: none;
+  background-color: transparent;
+  top: 40%;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  @include max;
+}
+.parallax {
+  @include parallax;
+  height: 40%;
+  width: 100%;
+}
+button {
+  cursor: pointer;
+}
+b {
+  font-size: 1.5em;
+}
+nav {
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: 9999;
+  background-color: #fff;
+  ul {
+    position: relative;
+    float: right;
+    li {
+      list-style-type: none;
+      float: left;
+      a {
+        display: block;
+        width: 200px;
+        height: 70px;
+        text-align: center;
+        color: #333;
+        padding-top: 20px;
+        font-size: 1.25em;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        font-weight: bold;
+      }
+    }
+  }
+}
+.ing {
+  a {
+    color: #fff;
+    background-color: #d1c1b3;
+    transition: 0.6s linear;
+  }
+}
+header {
+  position: relative;
+  @include max;
+}
+.index,
+.indexbg,
+.threeimg,
+.labarmask {
+  position: absolute;
+  @include max;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 2s;
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.down {
+  @include tdbtn;
+}
+.one,
+.two,
+.three,
+.four {
+  position: relative;
+  @include max;
+  @include bg;
+}
+.onetext1 {
+  @include text1;
+  top: 15%;
+}
+.onetext2 {
+  @include text2;
+  width: 32%;
+  right: 14%;
+  top: 35%;
+}
+.onedot1 {
+  @include titdot1;
+  top: 17%;
+}
+.onedot2 {
+  @include titdot2;
+  top: 17%;
+}
+.oneslide {
+  position: absolute;
+  width: 35%;
+  height: 40%;
+  top: 35%;
+  left: 14%;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.oneimg {
+  @include lrsul;
+}
+#dot1 {
+  @include dot;
+  left: 29%;
+}
+#dot2 {
+  @include dot;
+  left: 31%;
+}
+#dot3 {
+  @include dot;
+  left: 33%;
+}
+#dot4 {
+  @include dot;
+  left: 35%;
+}
+.twotext1,
+.threetext1,
+.fourtext1 {
+  @include text1;
+}
+.twotext2,
+.threetext2 {
+  @include text2;
+  width: 35%;
+  top: 20%;
+  left: 32.5%;
+}
+.img1 {
+  @include shop;
+  top: 45%;
+  left: 22.5%;
+}
+.img2 {
+  @include shop;
+  top: 45%;
+  left: 42.5%;
+}
+.img3 {
+  @include shop;
+  top: 45%;
+  left: 62.5%;
+}
+.img4 {
+  @include shop;
+  top: 75%;
+  left: 22.5%;
+}
+.img5 {
+  @include shop;
+  top: 75%;
+  left: 42.5%;
+}
+.img6 {
+  @include shop;
+  top: 75%;
+  left: 62.5%;
+}
+.mask {
+  @include mask;
+  color: #333;
+  font-size: 1.2em;
+  padding-top: 70px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.shop:hover {
+  transform: scale(1.1);
+  transition: 0.6s linear;
+}
+.mask:hover {
+  opacity: 1;
+}
+.three {
+  background-image: url(img/bg2.png);
+}
+.threedot1,
+.twodot1,
+.fourdot1 {
+  @include titdot1;
+  top: 12%;
+}
+.threedot2,
+.twodot2,
+.fourdot2 {
+  @include titdot2;
+  top: 12%;
+}
+.bcircle {
+  @include circle;
+  width: 20%;
+  height: 35%;
+  top: 53%;
+  left: 32%;
+}
+.bmask {
+  @include mask;
+  color: #fff;
+  font-size: 1.4em;
+  padding-top: 140px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.bmask:hover {
+  opacity: 1;
+}
+.s1 {
+  @include circle;
+  width: 10%;
+  height: 17%;
+  top: 43%;
+  left: 53%;
+}
+.s2 {
+  @include circle;
+  width: 10%;
+  height: 17%;
+  top: 60%;
+  left: 57%;
+}
+.s3 {
+  @include circle;
+  width: 10%;
+  height: 17%;
+  top: 77%;
+  left: 53%;
+}
+.smask {
+  @include mask;
+  font-size: 3em;
+  padding-top: 50px;
+  color: #fff;
+  background-color: rgba(209, 193, 179, 0.7);
+}
+.smask:hover {
+  opacity: 1;
+}
+.link1 {
+  @include line;
+  width: 10%;
+  top: 47%;
+  left: 48%;
+  transform: rotate(-33deg);
+}
+.link2 {
+  @include line;
+  width: 8.5%;
+  top: 58%;
+  left: 50%;
+  transform: rotate(0deg);
+}
+.link3 {
+  @include line;
+  width: 10%;
+  top: 72%;
+  left: 50%;
+  transform: rotate(33deg);
+}
+.fourtext2 {
+  @include text2;
+  top: 35%;
+  right: 14%;
+  width: 30%;
+}
+.labar {
+  position: absolute;
+  width: 35%;
+  height: 40%;
+  top: 35%;
+  left: 12%;
+  overflow: hidden;
+  z-index: 99;
+}
+.labar1 {
+  @include udsul;
+  bottom: 0;
+  left: 0%;
+}
+.labar2 {
+  @include udsul;
+  top: 0;
+  left: 25%;
+}
+.labar3 {
+  @include udsul;
+  bottom: 0;
+  left: 50%;
+}
+.labar4 {
+  @include udsul;
+  top: 0;
+  left: 75%;
+}
+.labarbtn {
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  top: 57%;
+  left: 46.3%;
+  background-color: transparent;
+  border: none;
+  z-index: 99;
+}
+.labarbg {
+  position: absolute;
+  width: 40%;
+  height: 45%;
+  left: 9.5%;
+  top: 32%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+.call {
+  width: 100%;
+  height: 70%;
+  @include parallax;
+}
+.calltext1 {
+  @include text1;
+  top: 5%;
+}
+.callbg {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+  @include max;
+  border-radius: 15px;
+}
+.calldot1 {
+  @include titdot1;
+  top: 8%;
+}
+.calldot2 {
+  @include titdot2;
+  top: 8%;
+}
+form {
+  position: absolute;
+  width: 50%;
+  height: 60%;
+  top: 25%;
+  left: 25%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+}
+.box {
+  width: 100%;
+}
+.name {
+  @include formcon;
+  top: 23%;
+}
+.phone {
+  @include formcon;
+  top: 43%;
+}
+.email {
+  @include formcon;
+  top: 63%;
+}
+.mess {
+  position: absolute;
+  width: 50%;
+  height: 60%;
+  right: 5%;
+  top: 20%;
+  font-size: 1.2em;
+  text-align: left;
+  color: #fff;
+}
+.messcon {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  top: 10%;
+}
+.sub {
+  position: absolute;
+  width: 15%;
+  height: 15%;
+  right: 15%;
+  bottom: 6%;
+  border: #fff solid 1px;
+  background-color: transparent;
+  color: #fff;
+  text-align: center;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+.top {
+  @include tdbtn;
+}
+footer {
+  position: relative;
+  width: 100%;
+  height: 15%;
+  background-color: #d1c1b3;
+  padding-top: 50px;
+  text-align: center;
+  font-size: 1.2em;
+  font-family: "文鼎特標準宋體";
+  color: #333;
+  font-weight: bold;
+  line-height: 1.8em;
+}
+.fb {
+  @include fans;
+  left: 70%;
+}
+.line {
+  @include fans;
+  left: 74%;
+}
